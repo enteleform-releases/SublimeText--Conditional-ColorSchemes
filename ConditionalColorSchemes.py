@@ -18,10 +18,10 @@ class CustomColorSchemes ( sublime_plugin.EventListener ):
 			return
 
 		settings = sublime.load_settings ( "ConditionalColorSchemes.sublime-settings" )
-		preferred_ColorScheme_Set    = settings.get ( "preferred_ColorScheme_Set",    "" )
+		preferred_ColorScheme_Set    = settings.get ( "preferred_ColorScheme_Set", "" )
 		include_FileName_In_FilePath = settings.get ( "include_FileName_In_FilePath", "" )
-		fileName_ColorSchemes     = settings.get ( "fileName_ColorSchemes", [] )
-		filePath_ColorSchemes     = settings.get ( "filePath_ColorSchemes", [] )
+		fileName_ColorSchemes        = settings.get ( "fileName_ColorSchemes", [] )
+		filePath_ColorSchemes        = settings.get ( "filePath_ColorSchemes", [] )
 
 		if include_FileName_In_FilePath == True:
 			filePath = file
