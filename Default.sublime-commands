@@ -1,0 +1,6 @@
+[
+	{
+		"caption": "Conditional ColorSchemes:   Edit Settings",
+		"command": "open_file", "args": { "file": "${packages}/User/ConditionalColorSchemes.sublime-settings" },
+	},
+]

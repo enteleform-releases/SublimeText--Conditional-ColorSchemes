@@ -1,0 +1,44 @@
+{
+	// This setting dictates which color scheme set will take priority
+	// if a match is found in both color scheme sets.
+	// Options: "fileName_ColorSchemes" or "filePath_ColorSchemes"
+	"preferred_ColorScheme_Set": "filePath_ColorSchemes",
+
+	// This setting, if enabled, allows regexPattern values in filePath_ColorSchemes to
+	// query the entire filepath, including the filename.
+	"include_FileName_In_FilePath": false,
+
+
+
+	// NOTE for regexPattern values:
+	//		JSON requires that backslashes be escaped,
+	//		so \\ is equivalent to a single backslash ( IE: RegEx escape character ),
+	//		and \\\\ is equivalent to a literal backslash.
+
+
+
+	// fileName_ColorSchemes regexPattern values will be matched against
+	// the active file's name ( including extension )
+	"fileName_ColorSchemes":
+		[
+			{	"regexPattern": ".*\\.css", // Matches any CSS file
+				"colorScheme": "Packages/Color Scheme - Default/Espresso Libre.tmTheme" },
+
+			{	"regexPattern": ".*\\.html", // Matches any HTML file
+				"colorScheme": "Packages/Color Scheme - Default/MagicWB (Amiga).tmTheme" },
+
+			{	"regexPattern": "Specific FileName\\..*", // Matches any file with the name "Specific FileName" ( extension is ignored )
+				"colorScheme": "Packages/Color Scheme - Default/Monokai Bright.tmTheme" },
+		],
+
+	// filePath_ColorSchemes regexPattern values will be matched against the active file's
+	// directory path ( excluding filename, unless include_FileName_In_FilePath is enabled )
+	"filePath_ColorSchemes":
+		[
+			{	"regexPattern": ".*\\\\Specific Directory 1", // Matches any file with "Specific Directory 1" as the final directory in it's path
+				"colorScheme": "Packages/Color Scheme - Default/Amy.tmTheme" },
+
+			{	"regexPattern": ".*\\\\Specific Directory 2\\\\Specific SubDirectory", // Matches any file with "Specific Directory 1/Specific SubDirectory" as the final directories in it's path
+				"colorScheme": "Packages/Color Scheme - Default/Cobalt.tmTheme" },
+		],
+}
