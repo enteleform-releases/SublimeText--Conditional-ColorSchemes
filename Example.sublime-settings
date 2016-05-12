@@ -47,7 +47,7 @@
 			{	"regexPattern": ".*\\\\Specific Directory\\\\Specific SubDirectory$",
 				"colorScheme": "Packages/Color Scheme - Default/Cobalt.tmTheme" },
 
-			// Match any file within "Specific Directory" within any subdirectory structure which has "Specific SubSubDirectory" as the final directory in its path
+			// Match any file within "Specific Directory" followed by any subdirectory structure which has "Specific SubSubDirectory" as the final directory in its path
 			{	"regexPattern": ".*\\\\Specific Directory\\\\.*\\\\Specific SubSubDirectory$",
 				"colorScheme": "Packages/Color Scheme - Default/Zenburnesque.tmTheme" },
 		],
