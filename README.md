@@ -38,6 +38,9 @@ and edit them as necessary.
 
 User settings can also be accessed via the command palette with the `Conditional ColorSchemes: Edit Settings` command.
 
+**Note:**  
+When adding new conditions, files that were already open must be reloaded in order for the color schemes to be affected.
+
 ## KNOWN BUGS
 
 When SublimeText is first opened, files are loaded before plugins.
