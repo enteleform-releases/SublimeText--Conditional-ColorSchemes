@@ -15,6 +15,7 @@ You can define `RegEx` patterns to match:
 * sequences of subdirectories within a particular parent directory
 
 Additionally, there is an `include_FileName_In_FilePath` setting which allows you to match:
+
 * specific files with an exact path
 * specific files with a particular extension within one of the previously mentioned directory patterns
 
