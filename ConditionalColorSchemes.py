@@ -26,8 +26,6 @@ class CustomColorSchemes( sublime_plugin.EventListener ):
 		if include_FileName_In_FilePath == True:
 			filePath = file
 
-		print( filePath )
-
 		if preferred_ColorScheme_Set == "filePath_ColorSchemes":
 			self.get_Conditional_ColorScheme( fileName, fileName_ColorSchemes )
 			self.get_Conditional_ColorScheme( filePath, filePath_ColorSchemes )
