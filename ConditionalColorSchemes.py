@@ -3,7 +3,7 @@ import re
 
 class CustomColorSchemes( sublime_plugin.EventListener ):
 
-	def on_load( self, view ):
+	def on_load_async( self, view ):
 
 		self.new_ColorScheme = None
 
@@ -11,7 +11,7 @@ class CustomColorSchemes( sublime_plugin.EventListener ):
 
 		try:
 			windowVariables = window.extract_variables()
-			file     = windowVariables[ "file" ]
+			file     = windowVariables[ "file"      ]
 			filePath = windowVariables[ "file_path" ]
 			fileName = windowVariables[ "file_name" ]
 		except( AttributeError, KeyError ) as e :
@@ -34,7 +34,8 @@ class CustomColorSchemes( sublime_plugin.EventListener ):
 			self.get_Conditional_ColorScheme( fileName, fileName_ColorSchemes )
 
 		if self.new_ColorScheme != None:
-			view.settings().set( "color_scheme", self.new_ColorScheme )
+			set_ColorScheme = lambda: view.settings().set( "color_scheme", self.new_ColorScheme )
+			sublime.set_timeout_async( set_ColorScheme )
 
 	def get_Conditional_ColorScheme( self, regexSource, colorScheme_Set ):
 

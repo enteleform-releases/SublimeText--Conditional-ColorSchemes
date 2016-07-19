@@ -15,7 +15,7 @@
 									[
 										{
 											"caption": "Settings – Example",
-											"command": "open_file", "args": { "file": "${packages}/ConditionalColorSchemes/Example.sublime-settings"},
+											"command": "open_file", "args": { "file": "${packages}/Conditional ColorSchemes/Example.sublime-settings"},
 										},
 
 										{
